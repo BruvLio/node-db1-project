@@ -22,7 +22,7 @@ router.get("/:id", async (req, res, next) => {
 router.post("/", async (req, res, next) => {
   try {
     const account = await Accounts.create(req.body);
-    res.status(200).json(account);
+    res.status(201).json(account);
   } catch (err) {
     next(err);
   }
